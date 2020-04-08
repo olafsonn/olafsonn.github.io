@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>   
-      <!--Bootstrap -->
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
-         <!-- CSS Style Sheet-->
-         <link rel="stylesheet" type="text/css" href="index.css">
-   
-        </head>
+<html lang="en">
+<head>
 
-    
+    <!--Bootstrap -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+       <!-- CSS Style Sheet-->
+       <link rel="stylesheet" type="text/css" href="index.css">
+ 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">    
+    body {
+        color:black;
+        background: white;
+        font-family: "Open Sans", sans-serif;
+    }
+    .contact-form {
+        padding: 50px;
+        margin: 30px 0;
+    }
+    .contact-form h1 {
+        text-transform: uppercase;
+        margin: 0 0 15px;
+    }
+    .contact-form .form-control, .contact-form .btn  {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .contact-form .btn-primary {
+        min-width: 150px;
+        background: gray;
+        border: none;
+    }
+    .contact-form .btn-primary:hover {
+        background: pink; 
+    }
+    .contact-form label {
+        opacity: 0.9;
+    }
+    .contact-form textarea {
+        resize: vertical;
+    }
+    .hint-text {
+        font-size: 15px;
+        padding-bottom: 15px;
+        opacity: 0.8;
+    }
+    .bs-example {
+    	margin: 20px;
+    }
+</style>
+</head>
 <body>
+
   <div>
     <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">Nichole Olafson</a>
@@ -31,27 +81,40 @@
       </ul>
     </div>
   </nav>
-</div>
- 
-    <!--Contact Form-->
-    <div class="container">
-        <h1>Contact</h1>
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 m-auto">
+			<div class="contact-form">
+				<h1>Contact Us</h1>
+				<p class="hint-text">I'd love to hear from you! Send me a message.</p>
+				<form action="/examples/actions/confirmation.php" method="post">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputFirstName">First Name</label>
+								<input type="text" class="form-control" id="inputFirstName" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputLastName">Last Name</label>
+								<input type="text" class="form-control" id="inputLastName" required>
+							</div>
+						</div>
+					</div>            
+					<div class="form-group">
+						<label for="inputEmail">Email Address</label>
+						<input type="email" class="form-control" id="inputEmail" required>
+					</div>
+					<div class="form-group">
+						<label for="inputMessage">Message</label>
+						<textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+					</div>
+					<input type="submit" class="btn btn-primary" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
-</html>
+</html>                            
